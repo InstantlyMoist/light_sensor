@@ -52,7 +52,7 @@ public class LightSensorPlugin implements FlutterPlugin, EventChannel.StreamHand
   public void onListen(Object arguments, EventChannel.EventSink events) {
       /// Set up the event sensor for the light sensor
       sensorEventListener = createSensorEventListener(events);
-      sensorManager.registerListener(sensorEventListener, sensor, SensorManager.SENSOR_DELAY_NORMAL);
+      sensorManager.registerListener(sensorEventListener, sensor, SensorManager.SENSOR_DELAY_FASTEST);
   }
 
   @Override
